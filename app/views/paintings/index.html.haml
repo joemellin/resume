@@ -10,6 +10,7 @@
         %td= painting.dimension
         %td= painting.year
         %td= painting.exhibition
-        %td= painting.current
+        - if user_signed_in?
+          %td= painting.current
         
 
