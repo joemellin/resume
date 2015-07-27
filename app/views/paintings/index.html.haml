@@ -4,13 +4,13 @@
       %tr
         %td= link_to (image_tag painting.image.url(:thumb)), painting
 
-        %td= link_to "#{painting.title}", painting
-        %td= painting.inventory
-        %td= painting.medium
-        %td= painting.dimension
-        %td= painting.year
-        %td= painting.exhibition
+        %td{:style => "font-size:.9em;"}= link_to "#{painting.title}", painting
+        %td{:style => "font-size:.9em;"}= painting.inventory
+        %td{:style => "font-size:.9em;"}= painting.medium
+        %td{:style => "font-size:.9em;"}= painting.dimension
+        %td{:style => "font-size:.9em;"}= painting.year
+        %td{:style => "font-size:.9em;"}= painting.exhibition
         - if user_signed_in?
-          %td= painting.current
+          %td{:style => "font-size:.9em;"}= painting.current
         
 
