@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'paperclip', '~> 4.2'
 gem 'jbuilder', '~> 2.0'
+gem 'aws-sdk', '< 2.0'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
