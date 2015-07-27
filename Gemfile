@@ -9,7 +9,10 @@ gem 'turbolinks'
 gem 'paperclip', '~> 4.2'
 gem 'jbuilder', '~> 2.0'
 gem 'aws-sdk', '< 2.0'
+
+
 group :development, :test do
+  gem 'sqlite3'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
@@ -17,7 +20,6 @@ end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'haml-rails'
-gem 'pg'
 gem 'simple_form'
 group :development do
   gem 'better_errors'
@@ -28,4 +30,5 @@ group :development do
 end
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
