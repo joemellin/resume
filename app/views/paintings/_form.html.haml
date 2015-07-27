@@ -1,0 +1,16 @@
+= simple_form_for(@painting) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :inventory
+    = f.input :title
+    = f.input :medium
+    = f.input :dimension
+    = f.input :year
+    = f.input :exhibition
+    = f.input :current
+    = f.label :image
+    = f.file_field :image, class: "form-control"
+
+  .form-actions
+    = f.button :submit

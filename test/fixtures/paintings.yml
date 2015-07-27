@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inventory: MyString
+  title: MyString
+  medium: MyString
+  dimension: MyString
+  year: 1
+  exhibition: MyString
+  current: MyString
+
+two:
+  inventory: MyString
+  title: MyString
+  medium: MyString
+  dimension: MyString
+  year: 1
+  exhibition: MyString
+  current: MyString

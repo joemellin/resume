@@ -1,0 +1,34 @@
+%h1 Listing paintings
+
+%table
+  %thead
+    %tr
+      %th Inventory
+      %th Title
+      %th Medium
+      %th Dimension
+      %th Year
+      %th Exhibition
+      %th Current
+      %th
+      %th
+      %th
+
+  %tbody
+    - @paintings.each do |painting|
+      %tr
+        %td= image_tag painting.image.url(:thumb)
+        %td= painting.inventory
+        %td= painting.title
+        %td= painting.medium
+        %td= painting.dimension
+        %td= painting.year
+        %td= painting.exhibition
+        %td= painting.current
+        %td= link_to 'Show', painting
+        %td= link_to 'Edit', edit_painting_path(painting)
+        %td= link_to 'Destroy', painting, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Painting', new_painting_path
