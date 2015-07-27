@@ -5,7 +5,7 @@ class PaintingsController < ApplicationController
   # GET /paintings
   # GET /paintings.json
   def index
-    @paintings = Painting.all.sort_by{ |m| m[:order] }
+    @paintings = Painting.all.sort { |p1, p2| p2.order <=> p1.order }
   end
 
   # GET /paintings/1
