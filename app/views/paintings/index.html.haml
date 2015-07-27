@@ -13,15 +13,15 @@
           %th
     - @paintings.each do |painting|
       %tr
-        %td= link_to (image_tag painting.image.url(:thumb)), painting
+        %td{:style => "font-size:.9em;border-top-color:#fff"}= link_to (image_tag painting.image.url(:thumb)), painting
 
-        %td{:style => "font-size:.9em;"}= link_to "#{painting.title}", painting
-        %td{:style => "font-size:.9em;"}= painting.inventory
-        %td{:style => "font-size:.9em;"}= painting.medium
-        %td{:style => "font-size:.9em;"}= painting.dimension
-        %td{:style => "font-size:.9em;"}= painting.exhibition
-        %td{:style => "font-size:.9em;"}= painting.year
+        %td{:style => "font-size:.9em;border-top-color:#fff"}= link_to "#{painting.title}", painting
+        %td{:style => "font-size:.9em;border-top-color:#fff"}= painting.inventory
+        %td{:style => "font-size:.9em;border-top-color:#fff"}= painting.medium
+        %td{:style => "font-size:.9em;border-top-color:#fff"}= painting.dimension
+        %td{:style => "font-size:.9em;border-top-color:#fff"}= painting.exhibition
+        %td{:style => "font-size:.9em;border-top-color:#fff"}= painting.year
         - if user_signed_in?
-          %td{:style => "font-size:.9em;"}= painting.current
+          %td{:style => "font-size:.9em;border-top-color:#fff"}= painting.current
         
 

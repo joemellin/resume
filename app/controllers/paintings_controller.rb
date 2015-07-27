@@ -5,7 +5,7 @@ class PaintingsController < ApplicationController
   # GET /paintings
   # GET /paintings.json
   def index
-    @paintings = Painting.all
+    @paintings = Painting.all.sort_by{ |m| m[:order] }
   end
 
   # GET /paintings/1
@@ -70,6 +70,6 @@ class PaintingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def painting_params
-      params.require(:painting).permit(:inventory, :title, :medium, :dimension, :year, :exhibition, :current, :image)
+      params.require(:painting).permit(:inventory, :title, :medium, :dimension, :year, :exhibition, :current, :image, :order)
     end
 end
