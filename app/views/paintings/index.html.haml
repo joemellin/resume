@@ -1,5 +1,16 @@
 %table.table.table-responsive
   %tbody
+    %thead
+      %tr
+        %th
+        %th Title
+        %th
+        %th
+        %th
+        %th 
+        %th Year
+        - if user_signed_in?
+          %th
     - @paintings.each do |painting|
       %tr
         %td= link_to (image_tag painting.image.url(:thumb)), painting
@@ -8,8 +19,8 @@
         %td{:style => "font-size:.9em;"}= painting.inventory
         %td{:style => "font-size:.9em;"}= painting.medium
         %td{:style => "font-size:.9em;"}= painting.dimension
-        %td{:style => "font-size:.9em;"}= painting.year
         %td{:style => "font-size:.9em;"}= painting.exhibition
+        %td{:style => "font-size:.9em;"}= painting.year
         - if user_signed_in?
           %td{:style => "font-size:.9em;"}= painting.current
         
