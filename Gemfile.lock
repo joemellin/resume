@@ -205,7 +205,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (< 2.0)
+  aws-sdk
   better_errors
   bootstrap-sass
   byebug
@@ -216,7 +216,7 @@ DEPENDENCIES
   hub
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 4.2)
+  paperclip
   pg
   quiet_assets
   rails (= 4.2.3)
