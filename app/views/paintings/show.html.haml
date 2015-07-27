@@ -1,28 +1,31 @@
-%p#notice= notice
+.container
+  .row{:style => "padding-top:50px;"}
+    .col-sm-9
 
-= image_tag @painting.image.url(:large)
-%p
-  %b Inventory:
-  = @painting.inventory
-%p
-  %b Title:
-  = @painting.title
-%p
-  %b Medium:
-  = @painting.medium
-%p
-  %b Dimension:
-  = @painting.dimension
-%p
-  %b Year:
-  = @painting.year
-%p
-  %b Exhibition:
-  = @painting.exhibition
-%p
-  %b Current:
-  = @painting.current
+      = image_tag @painting.image.url(:large), :class => "image-responsive"
+    .col-sm-3
+      %p
+        %b Inventory:
+        = @painting.inventory
+      %p
+        %b Title:
+        = @painting.title
+      %p
+        %b Medium:
+        = @painting.medium
+      %p
+        %b Dimension:
+        = @painting.dimension
+      %p
+        %b Year:
+        = @painting.year
+      %p
+        %b Exhibition:
+        = @painting.exhibition
+      %p
+        %b Current:
+        = @painting.current
 
-= link_to 'Edit', edit_painting_path(@painting)
-\|
-= link_to 'Back', paintings_path
+      = link_to 'Edit', edit_painting_path(@painting)
+      \|
+      = link_to 'Back', paintings_path
