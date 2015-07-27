@@ -2,7 +2,7 @@
   %tbody
     - @paintings.each do |painting|
       %tr
-        %td= image_tag painting.image.url(:thumb)
+        %td= link_to (image_tag painting.image.url(:thumb)), painting
 
         %td= link_to "#{painting.title}", painting
         %td= painting.inventory
