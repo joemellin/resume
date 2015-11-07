@@ -1,6 +1,6 @@
 class PaintingsController < ApplicationController
   before_action :set_painting, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :version2]
 
   # GET /paintings
   # GET /paintings.json
@@ -11,6 +11,10 @@ class PaintingsController < ApplicationController
   # GET /paintings/1
   # GET /paintings/1.json
   def show
+  end
+
+  def version2
+    @paintings = Painting.all.sort { |p1, p2| p2.order <=> p1.order }
   end
 
   # GET /paintings/new

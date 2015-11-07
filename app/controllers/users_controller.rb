@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def version2
+    @users = User.all
+  end
+
   def show
     @user = User.find(params[:id])
     unless @user == current_user
